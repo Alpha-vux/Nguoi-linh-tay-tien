@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binh Đoàn Tây Tiến - Kiểm Tra Kiến Thức Lịch Sử</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="military-container">
+        <!-- Tiêu đề phong cách quân đội -->
+        <header class="military-header">
+            <div class="star-badge">★</div>
+            <h1>BỘ ĐỘI TÂY TIẾN</h1>
+            <p class="subtitle">Sổ tay giáo dục truyền thống lịch sử - Trung đoàn 52</p>
+        </header>
+
+        <!-- PHẦN 1: XEM VIDEO YOUTUBE -->
+        <section class="military-card">
+            <h2>PHẦN I: NHIỆM VỤ NGHIÊN CỨU TƯ LIỆU</h2>
+            <div class="video-wrapper">
+                <!-- ĐÃ THÊM MÃ VIDEO IJwZ2cv7tp8 CỦA BẠN -->
+                <iframe width="100%" height="450" 
+                        src="https://www.youtube.com/embed/IJwZ2cv7tp8" 
+                        title="Video Tư Liệu Tây Tiến" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div id="videoStatus" class="status-box warning">
+                ⚠️ <strong>MẬT LỆNH:</strong> Đồng chí hãy xem kỹ đoạn phim tư liệu, sau đó bấm nút xác nhận bên dưới để mở khóa cửa ải sát hạch!
+            </div>
+
+            <div class="action-center" style="margin-top: 15px;">
+                <button type="button" class="btn-military" onclick="unlockQuizManual()">
+                    ✅ ĐÃ XEM XONG PHIM TƯ LIỆU
+                </button>
+            </div>
+        </section>
+
+        <!-- PHẦN 2: BÀI KIỂM TRA -->
+        <section class="military-card">
+            <h2>PHẦN II: SÁT HẠCH TRẮC NGHIỆM</h2>
+
+            <div id="lockMessage" class="lock-screen-msg">
+                🔒 KHU VỰC THỊ SÁT ĐANG KHÓA. HÃY HOÀN THÀNH XEM PHIM TƯ LIỆU Ở PHẦN I!
+            </div>
+
+            <div class="action-center">
+                <button id="startButton" class="btn-military" disabled onclick="startQuiz()">
+                    BẮT ĐẦU VƯỢT ẢI
+                </button>
+            </div>
+
+            <div id="quizContainer" class="quiz-container">
+                <div class="timer-box">
+                    <span>⏱️ THỜI GIAN THI HÀNH NHIỆM VỤ:</span>
+                    <span id="timer">10:00</span>
+                </div>
+
+                <form id="quizForm">
+                    <div id="questions"></div>
+                    
+                    <div class="action-center">
+                        <button type="button" id="submitBtn" class="btn-military btn-submit" onclick="submitQuiz()">
+                            NỘP BÁO CÁO KẾT QUẢ
+                        </button>
+                    </div>
+                </form>
+
+                <div id="resultBox" class="result-box">
+                    <div id="scoreDisplay" class="score-display"></div>
+                    <div id="resultDetails"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

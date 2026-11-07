@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace, Arial, sans-serif;
+    background-color: #141b12; /* Xanh sẫm đêm chiến dịch */
+    background-image: radial-gradient(#243321 15%, transparent 16%);
+    background-size: 20px 20px; /* Họa tiết lưới tọa độ quân sự */
+    color: #e2e8f0;
+    line-height: 1.6;
+    padding: 30px 10px;
+}
+
+.military-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #1a2418;
+    border: 4px solid #48663d;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    position: relative;
+}
+
+/* Trang trí góc viền phong cách thiết bị quân sự */
+.military-container::before {
+    content: "CAP-52 // SECURITY LEVEL A";
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    font-size: 0.7rem;
+    color: #5c824f;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.military-header {
+    text-align: center;
+    border-bottom: 4px solid #d4af37;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    background: linear-gradient(180deg, rgba(72,102,61,0.2) 0%, rgba(0,0,0,0) 100%);
+}
+
+.star-badge {
+    font-size: 3rem;
+    color: #ffcc00;
+    text-shadow: 0 0 12px rgba(255, 204, 0, 0.8);
+    line-height: 1;
+}
+
+.military-header h1 {
+    font-family: 'Teko', sans-serif;
+    color: #f1f5f9;
+    font-size: 3.2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #000;
+    margin-top: -5px;
+}
+
+.subtitle {
+    color: #94d285;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.military-card {
+    background: #202c1e;
+    border: 2px solid #3d5434;
+    padding: 22px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.military-card h2 {
+    font-family: 'Teko', sans-serif;
+    color: #ffcc00;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #48663d;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.video-wrapper {
+    width: 100%;
+    background: #000;
+    border: 3px solid #48663d;
+    box-shadow: 0 0 15px rgba(0,0,0,0.9);
+}
+
+.video-wrapper iframe {
+    display: block;
+}
+
+.status-box {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    padding: 14px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.status-box.warning {
+    background: #3b1d06;
+    border-left: 6px solid #f59e0b;
+    color: #fef08a;
+}
+
+.status-box.success {
+    background: #093829;
+    border-left: 6px solid #10b981;
+    color: #a7f3d0;
+}
+
+.lock-screen-msg {
+    text-align: center;
+    background: #3a0d0d;
+    color: #fca5a5;
+    border: 2px dashed #ef4444;
+    padding: 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.action-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Nút bấm quân đội thiết kế 3D mạnh mẽ */
+.btn-military {
+    font-family: 'Teko', sans-serif;
+    background: linear-gradient(180deg, #4d7c0f 0%, #295206 100%);
+    color: #fff;
+    border: 2px solid #ffcc00;
+    padding: 10px 35px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px 0 #183003, 0 5px 10px rgba(0,0,0,0.5);
+    transition: all 0.1s ease;
+}
+
+.btn-military:hover:not(:disabled) {
+    background: linear-gradient(180deg, #65a30d 0%, #366a08 100%);
+    box-shadow: 0 0 15px #ffcc00;
+}
+
+.btn-military:active:not(:disabled) {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #183003;
+}
+
+.btn-military:disabled {
+    background: #27272a;
+    color: #71717a;
+    border-color: #52525b;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.btn-submit {
+    background: linear-gradient(180deg, #1d4ed8 0%, #1e3a8a 100%);
+    border-color: #60a5fa;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 0 15px #60a5fa;
+}
+
+.quiz-container {
+    display: none;
+}
+
+.timer-box {
+    background: #0f172a;
+    color: #38bdf8;
+    border: 2px solid #0284c7;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.question-card {
+    background: #151f14;
+    border: 1px solid #3d5434;
+    border-left: 4px solid #ffcc00;
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+}
+
+.question-card h3 {
+    font-size: 1.05rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.option-label {
+    display: block;
+    background: #202c1e;
+    border: 1px solid #3d5434;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #e2e8f0;
+    transition: all 0.2s;
+}
+
+.option-label:hover {
+    background: #2e402b;
+    border-color: #ffcc00;
+}
+
+.option-label input {
+    margin-right: 10px;
+}
+
+.explanation {
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+    background: #1e293b;
+    border-left: 4px solid #3b82f6;
+    font-size: 0.9rem;
+    color: #bfdbfe;
+    border-radius: 2px;
+}
+
+.correct-choice {
+    background: #064e3b !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.wrong-choice {
+    background: #7f1d1d !important;
+    border-color: #ef4444 !important;
+    color: #ffffff !important;
+}
+
+.result-box {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: #064e3b;
+    border: 3px solid #ffcc00;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+}
+
+.score-display {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: #fef08a;
+    margin-bottom: 10px;
+}
